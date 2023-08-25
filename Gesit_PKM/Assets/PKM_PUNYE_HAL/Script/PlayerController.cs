@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        //Idle (Diam)
+        //Idle (Diam) tes pke else stlh if keydown
         if (Input.GetKeyUp(KeyCode.Space)){
             myAnim.Play("Idle");
         }

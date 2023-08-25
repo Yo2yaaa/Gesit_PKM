@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemiesSpawn : MonoBehaviour
 {
+    //Script Tempat dan mekanis enemySpawn [Sementara Nonaktif] 
+
     [SerializeField] private GameObject enemiesPrefab;
     [SerializeField] private float maxSpawnTime;
     private float timeUntilSpawn;
