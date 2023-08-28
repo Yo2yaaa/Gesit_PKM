@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Testing : MonoBehaviour
 {
+    //Script PlayerController ketika di hp, seperti pada zombero [Sementara Nonaktif] 
+
     private Animator myAnim;
     [SerializeField] float speed = 5f;
     private Vector3 target;
