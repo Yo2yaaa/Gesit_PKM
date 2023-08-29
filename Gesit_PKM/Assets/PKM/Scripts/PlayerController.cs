@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
 
     private float horizontalInput;
     private float verticalInput;
-    private bool facingRight = true;
     private Rigidbody2D rb;
 
 
@@ -25,6 +24,8 @@ public class PlayerController : MonoBehaviour
         //Movement
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
+
+        Flip();
     }
 
     private void FixedUpdate()
@@ -33,16 +34,26 @@ public class PlayerController : MonoBehaviour
         rb.MovePosition(rb.position + new Vector2(horizontalInput, verticalInput) * moveSpeed * Time.fixedDeltaTime);
     }
 
-    public bool IsFlip()
+    public void Flip()
     {
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (mousePosition.x < transform.position.x)
+        Vector3 mousePos = Input.mousePosition;
+
+        Vector3 weaponPosition = Camera.main.WorldToScreenPoint(transform.position);
+        mousePos.x = mousePos.x - weaponPosition.x;
+        mousePos.y = mousePos.y - weaponPosition.y;
+
+        float gunAngle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+
+        if (Camera.main.ScreenToWorldPoint(Input.mousePosition).x < transform.position.x)
         {
-            return true;
+            // transform.rotation = Quaternion.Euler(new Vector3(180f, 0f, 0f));
+            transform.localScale = new Vector3(-1, 1, 1);
         }
         else
         {
-            return false;
+            // transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
+            transform.localScale = new Vector3(1, 1, 1);
+
         }
     }
 }
