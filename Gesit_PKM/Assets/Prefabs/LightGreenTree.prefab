@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 683775609361770757}
   - component: {fileID: 2336905740629830624}
   - component: {fileID: 5759660895752653631}
+  - component: {fileID: 3171687481419079792}
   m_Layer: 0
   m_Name: LightGreenTree
   m_TagString: Untagged
@@ -98,6 +99,22 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.6498373}
+  m_Offset: {x: 0, y: -0.01605624}
   serializedVersion: 2
-  m_Radius: 0.5028117
+  m_Radius: 0.48359078
+--- !u!114 &3171687481419079792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4603857722909043204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff

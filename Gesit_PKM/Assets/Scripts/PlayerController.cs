@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
 
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
@@ -38,22 +38,13 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 mousePos = Input.mousePosition;
 
-        Vector3 weaponPosition = Camera.main.WorldToScreenPoint(transform.position);
-        mousePos.x = mousePos.x - weaponPosition.x;
-        mousePos.y = mousePos.y - weaponPosition.y;
-
-        float gunAngle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-
-        if (Camera.main.ScreenToWorldPoint(Input.mousePosition).x < transform.position.x)
+        if (Camera.main.ScreenToWorldPoint(mousePos).x < transform.position.x)
         {
-            // transform.rotation = Quaternion.Euler(new Vector3(180f, 0f, 0f));
             transform.localScale = new Vector3(-1, 1, 1);
         }
         else
         {
-            // transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
             transform.localScale = new Vector3(1, 1, 1);
-
         }
     }
 }
