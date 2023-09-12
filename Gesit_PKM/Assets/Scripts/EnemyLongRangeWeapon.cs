@@ -10,7 +10,7 @@ public class EnemyLongRangeWeapon : MonoBehaviour
     [SerializeField] private Transform shootPoint;
 
     private Enemy enemy;
-    private Vector2 target;
+    private Vector2 playerPosition = new(0, 0);
 
     private void Awake()
     {
@@ -31,11 +31,10 @@ public class EnemyLongRangeWeapon : MonoBehaviour
 
     private void RotateToTarget()
     {
-        Vector2 playerPosition = enemy.GetPlayerPosition();
+        playerPosition = enemy.GetPlayerPosition();
 
-        target = transform.position;
-        playerPosition.x -= target.x;
-        playerPosition.y -= target.y;
+        playerPosition.x -= transform.position.x;
+        playerPosition.y -= transform.position.y;
 
         float gunAngle = Mathf.Atan2(playerPosition.y, playerPosition.x) * Mathf.Rad2Deg;
 

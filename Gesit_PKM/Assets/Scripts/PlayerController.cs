@@ -8,17 +8,23 @@ using UnityEngine.Scripting.APIUpdating;
 
 public class PlayerController : MonoBehaviour
 {
+    public event Action<Vector2> OnEnemyInSight;
+    public event Action OnEnemyNotInSight;
+
     //Movement
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private Transform playerVisual;
     [SerializeField] private ParticleSystem getHitVFX;
     [SerializeField] private Transform deadVisual;
+    [SerializeField] private float viewRadius;
+    [SerializeField] private LayerMask targetMask;
+    [SerializeField] private LayerMask obstacleMask;
 
     private float horizontalInput;
     private float verticalInput;
     private Rigidbody2D rb;
     private HealthSystemComponent healthSystem;
-    private bool isDead;
+    private Transform closestTarget;
 
 
     void Awake()
@@ -51,6 +57,8 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
+        FindClosestTarget();
+
         Flip();
     }
 
@@ -62,9 +70,9 @@ public class PlayerController : MonoBehaviour
 
     public void Flip()
     {
-        Vector3 mousePos = Input.mousePosition;
+        if (!closestTarget) return;
 
-        if (Camera.main.ScreenToWorldPoint(mousePos).x < transform.position.x)
+        if (IsFlip())
         {
             playerVisual.transform.localScale = new Vector3(-1, 1, 1);
         }
@@ -74,7 +82,33 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void FindClosestTarget()
+    {
+        Enemy[] enemies = FindObjectsOfType<Enemy>();
+        closestTarget = null;
+        float maxDistance = Mathf.Infinity;
 
+        if (enemies.Length == 0)
+        {
+            OnEnemyNotInSight?.Invoke();
+            return;
+        }
 
+        foreach (Enemy enemy in enemies)
+        {
+            float distanceBetween = Vector3.Distance(transform.position, enemy.transform.position);
 
+            if (distanceBetween < maxDistance)
+            {
+                closestTarget = enemy.transform;
+                maxDistance = distanceBetween;
+            }
+        }
+        OnEnemyInSight?.Invoke(closestTarget.position);
+    }
+
+    public bool IsFlip()
+    {
+        return closestTarget.position.x < transform.position.x;
+    }
 }

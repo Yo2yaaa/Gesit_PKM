@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using CodeMonkey.HealthSystemCM;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerLongRangeWeapon : MonoBehaviour
@@ -11,38 +13,67 @@ public class PlayerLongRangeWeapon : MonoBehaviour
 
     private Coroutine firingCoroutine;
     private Vector2 target;
+    private PlayerController playerController;
+    private Vector2 targetDirection;
+    private bool isEnemyInSight;
+
+    private void Awake()
+    {
+        playerController = GetComponent<PlayerController>();
+    }
+
+    private void Start()
+    {
+        playerController.OnEnemyInSight += PlayerController_OnEnemyInSight;
+        playerController.OnEnemyNotInSight += PlayerController_OnEnemyNotInSight;
+    }
+
+    private void PlayerController_OnEnemyInSight(Vector2 targetPosition)
+    {
+        RotateToTarget(targetPosition);
+
+        if (!isEnemyInSight)
+        {
+            firingCoroutine = StartCoroutine(Shoot());
+            isEnemyInSight = true;
+        }
+    }
+
+    private void PlayerController_OnEnemyNotInSight()
+    {
+        StopCoroutine(firingCoroutine);
+        isEnemyInSight = false;
+    }
 
     void Update()
     {
-        RotateToTarget();
-        GetInput();
+        // RotateToTarget();
+        // GetInput();
     }
 
     private void GetInput()
     {
 
-        if (Input.GetButtonDown("Fire1"))
-        {
-            firingCoroutine = StartCoroutine(Shoot());
-        }
+        // if (Input.GetButtonDown("Fire1"))
+        // {
+        //     firingCoroutine = StartCoroutine(Shoot());
+        // }
 
-        if (Input.GetButtonUp("Fire1"))
-        {
-            StopCoroutine(firingCoroutine);
-        }
+        // if (Input.GetButtonUp("Fire1"))
+        // {
+        //     StopCoroutine(firingCoroutine);
+        // }
     }
 
-    private void RotateToTarget()
+    private void RotateToTarget(Vector2 targetPosition)
     {
-        Vector2 mousePos = Input.mousePosition;
+        targetPosition.x -= transform.position.x;
+        targetPosition.y -= transform.position.y;
 
-        target = Camera.main.WorldToScreenPoint(transform.position);
-        mousePos.x -= target.x;
-        mousePos.y -= target.y;
+        float gunAngle = Mathf.Atan2(targetPosition.y, targetPosition.x) * Mathf.Rad2Deg;
+        // weapon.transform.right = targetPosition.normalized;
 
-        float gunAngle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-
-        if (Camera.main.ScreenToWorldPoint(Input.mousePosition).x < transform.position.x)
+        if (playerController.IsFlip())
         {
             weapon.transform.localScale = new Vector3(-1, 1, 1);
             weapon.transform.rotation = Quaternion.Euler(new Vector3(180f, 0f, -gunAngle));
