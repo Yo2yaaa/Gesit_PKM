@@ -1,52 +1,92 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
+using CodeMonkey.HealthSystemCM;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 6f;
-    private Vector2 playerPosition;
+    private enum EnemyType
+    {
+        Idle,
+        Chasing
+    }
+    [SerializeField] private EnemyType enemyType;
+    [SerializeField] private Transform enemyVisual;
+    [SerializeField] private ParticleSystem getHitVFX;
+    [SerializeField] private Transform deadVisual;
 
-    private Rigidbody2D rb;
+    private Vector2 playerPosition;
     private NavMeshAgent navMeshAgent;
+    private HealthSystemComponent healthSystem;
 
 
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
-        rb = GetComponent<Rigidbody2D>();
-
+        healthSystem = GetComponent<HealthSystemComponent>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        healthSystem.GetHealthSystem().OnDamaged += HealthSystem_OnDamaged;
+        healthSystem.GetHealthSystem().OnDead += HealthSystem_OnDead;
+
         navMeshAgent.updateRotation = false;
         navMeshAgent.updateUpAxis = false;
+
+
+    }
+
+    private void HealthSystem_OnDead(object sender, EventArgs e)
+    {
+        Instantiate(deadVisual, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
+
+    private void HealthSystem_OnDamaged(object sender, EventArgs e)
+    {
+        getHitVFX.Play();
     }
 
     private void Update()
     {
-        playerPosition = FindAnyObjectByType<PlayerController>().transform.position;
-        navMeshAgent.SetDestination(playerPosition);
+        PlayerController player = FindAnyObjectByType<PlayerController>();
+        if (!player) return;
 
+        playerPosition = player.transform.position;
         Flip();
+
+        switch (enemyType)
+        {
+            case EnemyType.Idle:
+                // Nothing
+                break;
+            case EnemyType.Chasing:
+                navMeshAgent.SetDestination(playerPosition);
+                break;
+            default:
+                break;
+        }
     }
 
     public void Flip()
     {
         if (playerPosition.x < transform.position.x)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            enemyVisual.transform.localScale = new Vector3(-1, 1, 1);
         }
         else
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            enemyVisual.transform.localScale = new Vector3(1, 1, 1);
         }
     }
 
-    public bool isFlip()
+    public bool IsFlip()
     {
         return playerPosition.x < transform.position.x;
     }

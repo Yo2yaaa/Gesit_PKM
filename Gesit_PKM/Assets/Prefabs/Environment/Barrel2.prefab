@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4918288593640507892}
   - component: {fileID: 4716441456687890517}
   - component: {fileID: -3951373257235034911}
-  - component: {fileID: 592415894983467275}
+  - component: {fileID: 6157624446457157082}
   m_Layer: 0
   m_Name: Barrel2
   m_TagString: Untagged
@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 4674148453428087915}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -102,8 +102,8 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
---- !u!58 &592415894983467275
-CircleCollider2D:
+--- !u!70 &6157624446457157082
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -115,6 +115,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.01605624}
-  serializedVersion: 2
-  m_Radius: 0.48359078
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.08, y: 1.32}
+  m_Direction: 0
