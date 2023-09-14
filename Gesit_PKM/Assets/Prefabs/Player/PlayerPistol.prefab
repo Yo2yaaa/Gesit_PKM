@@ -227,7 +227,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3936638, y: 2.4005766}
+  m_Size: {x: 1.8437134, y: 2.4005766}
   m_EdgeRadius: 0
 --- !u!50 &8287028251620467990
 Rigidbody2D:
@@ -313,6 +313,7 @@ GameObject:
   - component: {fileID: 8287028252248357762}
   - component: {fileID: 8287028252248357885}
   - component: {fileID: 8287028252248357763}
+  - component: {fileID: 173210690}
   m_Layer: 8
   m_Name: PlayerVisual
   m_TagString: Player
@@ -403,6 +404,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCloseRangeWeapon: {fileID: 0}
+--- !u!210 &173210690
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8287028252248357883}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &8287028252367488130
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,6 +609,10 @@ PrefabInstance:
     - target: {fileID: 6848739074368699837, guid: f1419c2a3f5ecf44e824039f908fea60, type: 3}
       propertyPath: m_SortingLayerID
       value: -902596233
+      objectReference: {fileID: 0}
+    - target: {fileID: 6848739074368699837, guid: f1419c2a3f5ecf44e824039f908fea60, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6848739074368699838, guid: f1419c2a3f5ecf44e824039f908fea60, type: 3}
       propertyPath: m_Pivot.x

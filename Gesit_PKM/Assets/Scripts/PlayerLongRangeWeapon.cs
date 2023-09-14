@@ -92,7 +92,7 @@ public class PlayerLongRangeWeapon : MonoBehaviour
             Transform bulletTransform = Instantiate(weaponTypeSO.bulletPrefab, shootPoint.position, shootPoint.rotation);
             Vector3 shootDirection = (shootPoint.transform.position - weapon.transform.position).normalized;
             bulletTransform.TryGetComponent(out Bullet bullet);
-            bullet.Setup(shootDirection, weaponTypeSO.damage, weaponTypeSO.bulletMoveSpeed);
+            bullet.Setup(shootDirection, weaponTypeSO.damage, weaponTypeSO.bulletMoveSpeed, Bullet.Source.Player);
 
             yield return new WaitForSeconds(weaponTypeSO.timeBetweenAttack);
         }
