@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1213341905718174311}
   - component: {fileID: -5351247611780065339}
   - component: {fileID: 1117435685127578733}
+  - component: {fileID: 4711380045742582569}
   m_Layer: 0
   m_Name: Small_Stone
   m_TagString: Untagged
@@ -138,3 +139,17 @@ PolygonCollider2D:
       - {x: 0.355, y: -0.16}
       - {x: 0.355, y: -0.07}
       - {x: 0.295, y: 0.089999996}
+--- !u!114 &4711380045742582569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6026905031483664999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ccd71d0291c3654ab7c1b1b9bb9fa5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorType: 4
+  anchorOffset: {x: -3, y: -3, z: 0}

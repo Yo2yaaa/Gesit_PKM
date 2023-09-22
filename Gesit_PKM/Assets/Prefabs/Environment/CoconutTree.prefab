@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7441960607594737053}
   - component: {fileID: 3949777013387053887}
   - component: {fileID: 2491977464858267042}
+  - component: {fileID: 7786069513885036527}
   m_Layer: 0
   m_Name: CoconutTree
   m_TagString: Untagged
@@ -118,3 +119,17 @@ CircleCollider2D:
   m_Offset: {x: -0.25629926, y: -1.1877099}
   serializedVersion: 2
   m_Radius: 0.21508688
+--- !u!114 &7786069513885036527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6090436962826648655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ccd71d0291c3654ab7c1b1b9bb9fa5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorType: 6
+  anchorOffset: {x: 3, y: 3, z: 0}

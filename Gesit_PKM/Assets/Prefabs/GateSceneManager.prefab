@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8670993235699257352}
   - component: {fileID: 8670993235699257353}
   - component: {fileID: 8670993235699257356}
+  - component: {fileID: 7921629395646829184}
   m_Layer: 0
   m_Name: GateSceneManager
   m_TagString: Untagged
@@ -170,3 +171,17 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!114 &7921629395646829184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8670993235699257354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ccd71d0291c3654ab7c1b1b9bb9fa5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorType: 7
+  anchorOffset: {x: 0, y: -1, z: 0}

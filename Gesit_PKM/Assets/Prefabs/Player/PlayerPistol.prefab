@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: 8287028251620467985}
   - component: {fileID: 8287028251620467984}
   - component: {fileID: 8287028251620467987}
+  - component: {fileID: 803627017381387}
   m_Layer: 8
   m_Name: PlayerPistol
   m_TagString: Untagged
@@ -302,6 +303,20 @@ MonoBehaviour:
   weaponTypeSO: {fileID: 11400000, guid: 4f4ca8c89f3f81f4999c4d810964051e, type: 2}
   weapon: {fileID: 8287028252367488131}
   shootPoint: {fileID: 8287028250628558030}
+--- !u!114 &803627017381387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8287028251620467981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ccd71d0291c3654ab7c1b1b9bb9fa5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorType: 4
+  anchorOffset: {x: 0, y: -16, z: 0}
 --- !u!1 &8287028252248357883
 GameObject:
   m_ObjectHideFlags: 0

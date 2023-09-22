@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7509096287153979108}
   - component: {fileID: 5975750635749864645}
   - component: {fileID: 7533473032998090348}
+  - component: {fileID: 1350738980760293959}
   m_Layer: 0
   m_Name: Starfish
   m_TagString: Untagged
@@ -101,3 +102,17 @@ MonoBehaviour:
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!114 &1350738980760293959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640305940156209672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ccd71d0291c3654ab7c1b1b9bb9fa5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorType: 4
+  anchorOffset: {x: 0, y: 0, z: 0}
