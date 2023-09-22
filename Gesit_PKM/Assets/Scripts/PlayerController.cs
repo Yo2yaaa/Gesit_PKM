@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
 
     private void FindClosestTarget()
     {
-        Enemy[] enemies = FindObjectsOfType<Enemy>();
+        Enemy[] enemies = GameManager.Instance.GetEnemyList();
         closestTarget = null;
         float maxDistance = Mathf.Infinity;
 

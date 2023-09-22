@@ -34,6 +34,7 @@ public class Bullet : MonoBehaviour
     {
         if (other.GetComponent<Enemy>() && source == Source.Enemy) return;
         if (other.GetComponent<PlayerController>() && source == Source.Player) return;
+        if (other.GetComponent<KnowledgeItem>()) return;
 
         if (HealthSystem.TryGetHealthSystem(other.gameObject, out HealthSystem healthSystem, true))
         {

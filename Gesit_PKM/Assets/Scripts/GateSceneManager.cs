@@ -21,7 +21,11 @@ public class GateSceneManager : MonoBehaviour
     {
         if (other.TryGetComponent<PlayerController>(out PlayerController playerController))
         {
-            questionPage.gameObject.SetActive(true);
+            if (GameManager.Instance.GetEnemyList().Length <= 0)
+            {
+                questionPage.gameObject.SetActive(true);
+                // Time.timeScale = 0;
+            }
         }
     }
 

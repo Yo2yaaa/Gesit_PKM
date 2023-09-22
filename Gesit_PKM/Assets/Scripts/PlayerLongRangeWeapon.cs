@@ -94,6 +94,8 @@ public class PlayerLongRangeWeapon : MonoBehaviour
             bulletTransform.TryGetComponent(out Bullet bullet);
             bullet.Setup(shootDirection, weaponTypeSO.damage, weaponTypeSO.bulletMoveSpeed, Bullet.Source.Player);
 
+            SoundManager.Instance.PlayShootingSound();
+
             yield return new WaitForSeconds(weaponTypeSO.timeBetweenAttack);
         }
     }
