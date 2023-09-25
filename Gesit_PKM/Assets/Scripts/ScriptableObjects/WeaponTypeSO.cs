@@ -7,7 +7,8 @@ public class WeaponTypeSO : ScriptableObject
 {
     public WeaponRangeType weaponRangeType;
     public Transform bulletPrefab;
-    public float timeBetweenAttack;
+    public float minTimeBetweenAttack;
+    public float maxTimeBetweenAttack;
     public float damage;
     public float bulletMoveSpeed;
 }

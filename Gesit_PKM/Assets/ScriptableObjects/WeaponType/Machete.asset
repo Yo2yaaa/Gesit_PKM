@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Machete
   m_EditorClassIdentifier: 
   weaponRangeType: 0
-  weaponType: 2
   bulletPrefab: {fileID: 0}
   timeBetweenAttack: 1
-  damage: 20
+  damage: 5
   bulletMoveSpeed: 0

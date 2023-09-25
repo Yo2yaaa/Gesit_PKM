@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using CodeMonkey.HealthSystemCM;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyLongRangeWeapon : MonoBehaviour
@@ -10,7 +11,9 @@ public class EnemyLongRangeWeapon : MonoBehaviour
     [SerializeField] private Transform shootPoint;
 
     private Enemy enemy;
-    private Vector2 playerPosition = new(0, 0);
+    private Vector3 playerPosition = new(0, 0);
+    private bool hasShootCoroutine;
+    private Coroutine firingCoroutine;
 
     private void Awake()
     {
@@ -54,15 +57,25 @@ public class EnemyLongRangeWeapon : MonoBehaviour
     {
         while (true)
         {
-            Transform bulletTransform = Instantiate(weaponTypeSO.bulletPrefab, shootPoint.position, shootPoint.rotation);
-            Vector3 shootDirection = (shootPoint.transform.position - weapon.transform.position).normalized;
-            bulletTransform.TryGetComponent(out Bullet bullet);
-            bullet.Setup(shootDirection, weaponTypeSO.damage, weaponTypeSO.bulletMoveSpeed, Bullet.Source.Enemy);
+            StartShooting();
 
-            SoundManager.Instance.PlayShootingSound();
+            float minNumber = weaponTypeSO.minTimeBetweenAttack;
+            float maxNumber = weaponTypeSO.maxTimeBetweenAttack;
+            float timeBetweenAttack = Random.Range(minNumber, maxNumber);
 
-            yield return new WaitForSeconds(weaponTypeSO.timeBetweenAttack);
+            yield return new WaitForSeconds(timeBetweenAttack);
         }
+    }
 
+    private void StartShooting()
+    {
+        if (!enemy.IsPlayerVisible()) return;
+
+        Transform bulletTransform = Instantiate(weaponTypeSO.bulletPrefab, shootPoint.position, shootPoint.rotation);
+        Vector3 shootDirection = (shootPoint.transform.position - weapon.transform.position).normalized;
+        _ = bulletTransform.TryGetComponent(out Bullet bullet);
+        bullet.Setup(shootDirection, weaponTypeSO.damage, weaponTypeSO.bulletMoveSpeed, Bullet.Source.Enemy);
+
+        SoundManager.Instance.PlayShootingSound();
     }
 }

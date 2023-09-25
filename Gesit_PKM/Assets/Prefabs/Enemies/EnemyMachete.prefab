@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4103414010926267466}
   - component: {fileID: 1120492229772225612}
   - component: {fileID: 1120492229772225613}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: EnemyMachete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,10 +116,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d945d5573c0b9334d9c8b90fe63309ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyType: 0
+  enemyType: 1
   enemyVisual: {fileID: 1120492230527693356}
   getHitVFX: {fileID: 6886252563797254627}
-  deadVisual: {fileID: 4255036138007910487, guid: 397c587ed4dfa4e49a37821787acf635, type: 3}
+  deadVisual: {fileID: 5426050872346794716, guid: 397c587ed4dfa4e49a37821787acf635, type: 3}
 --- !u!114 &4103414010926267466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
   weaponTypeSO: {fileID: 11400000, guid: 0270dd5b728635b40ac0c089bb7ad529, type: 2}
   weapon: {fileID: 1120492230252095295}
   enemyAnimation: {fileID: 1120492230527693359}
-  weaponColldier: {fileID: 0}
+  weaponColldier: {fileID: 6128467670619480766}
 --- !u!114 &1120492229772225612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,8 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eb9aa7183709da429076edc5294507b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthAmountMax: 70
-  startingHealthAmount: 100
+  healthAmountMax: 120
+  startingHealthAmount: 120
 --- !u!195 &1120492229772225613
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -160,7 +160,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3
+  m_Speed: 3.75
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -182,7 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1120492230252095295}
   - component: {fileID: 1120492230252095294}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +266,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1120492230519603300}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 1120492230527693357}
   - component: {fileID: 1120492230527693358}
   - component: {fileID: 1120492230527693359}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: EnemyCloseVisual
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -366,7 +366,7 @@ SpriteRenderer:
   m_SortingLayerID: -902596233
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 281ca9c249db5b54abbecf59232314a0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1954aa1e070b5054c8ab25b8d444b4a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -420,7 +420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1120492230887686946}
   - component: {fileID: 1120492230887686973}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: ArmorBody
   m_TagString: Armor
   m_Icon: {fileID: 0}
@@ -478,7 +478,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1120492231005011446}
   - component: {fileID: 6128467670619480766}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: HitObject
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -545,7 +545,7 @@ GameObject:
   - component: {fileID: 5802697189716464111}
   - component: {fileID: 5802697189716464110}
   - component: {fileID: 5802697189716464105}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: EnemyRangeHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -591,7 +591,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 675639709
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &5802697189716464110
@@ -646,7 +646,7 @@ GameObject:
   - component: {fileID: 5802697190557949764}
   - component: {fileID: 5802697190557949767}
   - component: {fileID: 5802697190557949766}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -736,7 +736,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5802697190600436724}
   - component: {fileID: 5802697190600436725}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: HealthBarUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -791,7 +791,7 @@ GameObject:
   - component: {fileID: 5802697190635272429}
   - component: {fileID: 5802697190635272428}
   - component: {fileID: 5802697190635272431}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -882,7 +882,7 @@ GameObject:
   - component: {fileID: 6886252563797254625}
   - component: {fileID: 6886252563797254627}
   - component: {fileID: 6886252563797254626}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: GetHitVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}

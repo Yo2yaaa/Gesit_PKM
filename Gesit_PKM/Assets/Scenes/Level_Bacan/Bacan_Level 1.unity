@@ -2880,11 +2880,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 683775609361770757, guid: a41782508e32a1840b8f4c9617dec5be, type: 3}
   m_PrefabInstance: {fileID: 907617481}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &1552123845 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 849731945242828186, guid: 6a9e661742893df4fb432a0bd39dc25c, type: 3}
-  m_PrefabInstance: {fileID: 76454962}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1563372163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3125,10 +3120,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5856841898404338946, guid: 2d6579075820a0e4b8f58f97cd59cb34, type: 3}
-      propertyPath: enemyType
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5856841898404339006, guid: 2d6579075820a0e4b8f58f97cd59cb34, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3313,7 +3304,7 @@ PrefabInstance:
     - target: {fileID: 8670993235699257353, guid: 4f5440ed9f5464c41adc5843af1aaf92, type: 3}
       propertyPath: questionPage
       value: 
-      objectReference: {fileID: 1552123845}
+      objectReference: {fileID: 0}
     - target: {fileID: 8670993235699257354, guid: 4f5440ed9f5464c41adc5843af1aaf92, type: 3}
       propertyPath: m_Name
       value: GateSceneManager

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Rifle
   m_EditorClassIdentifier: 
   weaponRangeType: 1
-  weaponType: 1
   bulletPrefab: {fileID: 5653775411208757917, guid: d5da57374f6b5a1458fe3f6d55f3d683, type: 3}
-  timeBetweenAttack: 2
+  minTimeBetweenAttack: 1.5
+  maxTimeBetweenAttack: 1.5
   damage: 30
-  bulletMoveSpeed: 70
+  bulletMoveSpeed: 75

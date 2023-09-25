@@ -30,4 +30,21 @@ public class SceneLoader : Singleton<SceneLoader>
     {
         Application.Quit();
     }
+
+    public void LoadFirstLevelOfJailolo()
+    {
+        SceneManager.LoadScene("Jailolo_Level 1");
+    }
+    public void LoadFirstLevelOfBacan()
+    {
+        SceneManager.LoadScene("Bacan_Level 1");
+    }
+    public void LoadFirstLevelOfTidore()
+    {
+        SceneManager.LoadScene("Tidore_Level 1");
+    }
+    public void LoadFirstLevelOfTernate()
+    {
+        SceneManager.LoadScene("Ternate_Level 1");
+    }
 }

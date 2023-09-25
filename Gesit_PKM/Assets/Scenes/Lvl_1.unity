@@ -760,6 +760,13 @@ MonoBehaviour:
   playerVisual: {fileID: 0}
   getHitVFX: {fileID: 0}
   deadVisual: {fileID: 0}
+  viewRadius: 0
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!50 &173210692
 Rigidbody2D:
   serializedVersion: 4

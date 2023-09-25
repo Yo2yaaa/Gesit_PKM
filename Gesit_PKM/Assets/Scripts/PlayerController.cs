@@ -9,6 +9,7 @@ using UnityEngine.Scripting.APIUpdating;
 public class PlayerController : MonoBehaviour
 {
     public event Action<Vector2> OnEnemyInSight;
+    public event Action<bool> OnMove;
     public event Action OnEnemyNotInSight;
 
     //Movement
@@ -42,7 +43,7 @@ public class PlayerController : MonoBehaviour
     private void HealthSystem_OnDead(object sender, EventArgs e)
     {
         Instantiate(deadVisual, transform.position, Quaternion.identity);
-        Time.timeScale = 0;
+        GameManager.Instance.Lose();
         Destroy(gameObject);
     }
 
@@ -56,6 +57,15 @@ public class PlayerController : MonoBehaviour
         //Movement
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
+
+        if (horizontalInput == 0 && verticalInput == 0)
+        {
+            OnMove?.Invoke(false);
+        }
+        else
+        {
+            OnMove?.Invoke(true);
+        }
 
         FindClosestTarget();
 
@@ -105,6 +115,7 @@ public class PlayerController : MonoBehaviour
             }
         }
         OnEnemyInSight?.Invoke(closestTarget.position);
+
     }
 
     public bool IsFlip()

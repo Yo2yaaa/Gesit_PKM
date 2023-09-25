@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     private enum EnemyType
     {
         Idle,
+        IdleAndChase,
         Chasing
     }
     [SerializeField] private EnemyType enemyType;
@@ -19,9 +20,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] private ParticleSystem getHitVFX;
     [SerializeField] private Transform deadVisual;
 
-    private Vector2 playerPosition;
+    private Vector3 playerPosition;
     private NavMeshAgent navMeshAgent;
     private HealthSystemComponent healthSystem;
+    private bool canSeePlayer;
 
 
     private void Awake()
@@ -64,6 +66,17 @@ public class Enemy : MonoBehaviour
         switch (enemyType)
         {
             case EnemyType.Idle:
+                break;
+            case EnemyType.IdleAndChase:
+                if (!canSeePlayer)
+                {
+                    navMeshAgent.isStopped = false;
+                    navMeshAgent.SetDestination(playerPosition);
+                }
+                else
+                {
+                    navMeshAgent.isStopped = true;
+                }
                 // Nothing
                 break;
             case EnemyType.Chasing:
@@ -72,6 +85,11 @@ public class Enemy : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    private void FixedUpdate()
+    {
+        IsPlayerVisible();
     }
 
     public void Flip()
@@ -91,8 +109,26 @@ public class Enemy : MonoBehaviour
         return playerPosition.x < transform.position.x;
     }
 
-    public Vector2 GetPlayerPosition()
+    public Vector3 GetPlayerPosition()
     {
         return playerPosition;
+    }
+
+    public bool IsPlayerVisible()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, playerPosition - transform.position);
+        if (hit.collider != null)
+        {
+            canSeePlayer = hit.collider.gameObject.GetComponent<PlayerController>();
+            if (canSeePlayer)
+            {
+                Debug.DrawRay(transform.position, playerPosition - transform.position, Color.green);
+            }
+            else
+            {
+                Debug.DrawRay(transform.position, playerPosition - transform.position, Color.red);
+            }
+        }
+        return canSeePlayer;
     }
 }

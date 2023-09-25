@@ -20,7 +20,7 @@ public class EnemyCloseRangeWeapon : MonoBehaviour
 
     void Update()
     {
-        Vector2 playerPosition = enemy.GetPlayerPosition();
+        Vector3 playerPosition = enemy.GetPlayerPosition();
         if (Vector2.Distance(playerPosition, transform.position) < 3)
         {
             enemyAnimation.SwingWeapon();

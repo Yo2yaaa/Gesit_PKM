@@ -8,6 +8,7 @@ using Unity.Mathematics;
 
 public class QuestionUI : MonoBehaviour
 {
+    [SerializeField] private GateSceneManager gateSceneManager;
     [SerializeField] private QuestionSO questionSO;
     [SerializeField] private TMP_Text questionText;
     [SerializeField] private TMP_Text[] optionsArray;

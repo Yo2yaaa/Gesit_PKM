@@ -190,7 +190,7 @@ PrefabInstance:
     - target: {fileID: 8670993235699257353, guid: 4f5440ed9f5464c41adc5843af1aaf92, type: 3}
       propertyPath: questionPage
       value: 
-      objectReference: {fileID: 649616835}
+      objectReference: {fileID: 0}
     - target: {fileID: 8670993235699257354, guid: 4f5440ed9f5464c41adc5843af1aaf92, type: 3}
       propertyPath: m_Name
       value: GateSceneManager
@@ -651,7 +651,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 53bbf53e74d6e77459506e9d70796242, type: 2}
     - target: {fileID: 5856841898404339006, guid: 416a589e9aa709b4d9d60e986f284c94, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5856841898404339006, guid: 416a589e9aa709b4d9d60e986f284c94, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1193,7 +1193,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &483306153
 PrefabInstance:
@@ -1623,11 +1623,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4970843467999384689, guid: f78f3b484b8eb1842b3e090baf9d5560, type: 3}
   m_PrefabInstance: {fileID: 638052339}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &649616835 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 849731945242828186, guid: 6a9e661742893df4fb432a0bd39dc25c, type: 3}
-  m_PrefabInstance: {fileID: 1526652822}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &685786628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1809,7 +1804,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &744019483
 MonoBehaviour:
@@ -4116,7 +4111,7 @@ Transform:
   - {fileID: 1631166411}
   - {fileID: 129650397}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1843025201
 PrefabInstance:
@@ -4505,7 +4500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8287028251620467986, guid: 1f1284fd56ebc1245bf95943596e8988, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8287028251620467986, guid: 1f1284fd56ebc1245bf95943596e8988, type: 3}
       propertyPath: m_LocalPosition.x

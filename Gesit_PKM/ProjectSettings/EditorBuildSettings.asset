@@ -5,10 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Level_Jailolo/Jailolo_Level 1.unity
-    guid: 5e627858427bf0b4ea21adcb2396f9d7
+    guid: b0e18f9f6f8a2aa4683af1f6563375a7
   - enabled: 1
-    path: Assets/Scenes/Level_Bacan/Bacan_Level 1.unity
-    guid: d88b73e653af8c24cab010f43b74dd70
+    path: Assets/Scenes/Level_Jailolo/Jailolo_Level 2.unity
+    guid: 322d863f01d857743be0f9b267ee8ff9
+  - enabled: 1
+    path: Assets/Scenes/Level_Jailolo/Jailolo_Level 3.unity
+    guid: 25e0b34e5c1698f43ad817d5dc8a05d2
   m_configObjects: {}

@@ -16,6 +16,7 @@ public class PlayerLongRangeWeapon : MonoBehaviour
     private PlayerController playerController;
     private Vector2 targetDirection;
     private bool isEnemyInSight;
+    private bool isPlayerMove;
 
     private void Awake()
     {
@@ -26,10 +27,23 @@ public class PlayerLongRangeWeapon : MonoBehaviour
     {
         playerController.OnEnemyInSight += PlayerController_OnEnemyInSight;
         playerController.OnEnemyNotInSight += PlayerController_OnEnemyNotInSight;
+        playerController.OnMove += PlayerController_OnMove;
+    }
+
+    private void PlayerController_OnMove(bool isPlayerMove)
+    {
+        this.isPlayerMove = isPlayerMove;
     }
 
     private void PlayerController_OnEnemyInSight(Vector2 targetPosition)
     {
+        if (isPlayerMove)
+        {
+            if (firingCoroutine != null) StopCoroutine(firingCoroutine);
+            isEnemyInSight = false;
+            return;
+        }
+
         RotateToTarget(targetPosition);
 
         if (!isEnemyInSight)
@@ -41,28 +55,9 @@ public class PlayerLongRangeWeapon : MonoBehaviour
 
     private void PlayerController_OnEnemyNotInSight()
     {
+        if (firingCoroutine == null) return;
         StopCoroutine(firingCoroutine);
         isEnemyInSight = false;
-    }
-
-    void Update()
-    {
-        // RotateToTarget();
-        // GetInput();
-    }
-
-    private void GetInput()
-    {
-
-        // if (Input.GetButtonDown("Fire1"))
-        // {
-        //     firingCoroutine = StartCoroutine(Shoot());
-        // }
-
-        // if (Input.GetButtonUp("Fire1"))
-        // {
-        //     StopCoroutine(firingCoroutine);
-        // }
     }
 
     private void RotateToTarget(Vector2 targetPosition)
@@ -96,7 +91,11 @@ public class PlayerLongRangeWeapon : MonoBehaviour
 
             SoundManager.Instance.PlayShootingSound();
 
-            yield return new WaitForSeconds(weaponTypeSO.timeBetweenAttack);
+            float minNumber = weaponTypeSO.minTimeBetweenAttack;
+            float maxNumber = weaponTypeSO.maxTimeBetweenAttack;
+            float timeBetweenAttack = UnityEngine.Random.Range(minNumber, maxNumber);
+
+            yield return new WaitForSeconds(timeBetweenAttack);
         }
     }
 }
