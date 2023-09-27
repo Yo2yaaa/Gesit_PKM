@@ -6,6 +6,7 @@ using CodeMonkey.HealthSystemCM;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AI;
+using MoreMountains.Feedbacks;
 
 public class Enemy : MonoBehaviour
 {
@@ -17,8 +18,8 @@ public class Enemy : MonoBehaviour
     }
     [SerializeField] private EnemyType enemyType;
     [SerializeField] private Transform enemyVisual;
-    [SerializeField] private ParticleSystem getHitVFX;
     [SerializeField] private Transform deadVisual;
+    [SerializeField] private MMFeedbacks getHitFeedback;
 
     private Vector3 playerPosition;
     private NavMeshAgent navMeshAgent;
@@ -52,7 +53,7 @@ public class Enemy : MonoBehaviour
 
     private void HealthSystem_OnDamaged(object sender, EventArgs e)
     {
-        getHitVFX.Play();
+        getHitFeedback.PlayFeedbacks();
     }
 
     private void Update()

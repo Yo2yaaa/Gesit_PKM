@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using MoreMountains.Feedbacks;
 
 public class GateSceneManager : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class GateSceneManager : MonoBehaviour
     public static GateSceneManager Instance;
     [SerializeField] private Transform questionPage;
     [SerializeField] private Sprite openGateSprite;
+    [SerializeField] private MMFeedbacks fadeTransition;
+    [SerializeField] private MMFeedbacks successFeedbacks;
 
     private SpriteRenderer spriteRenderer;
 
@@ -35,7 +38,8 @@ public class GateSceneManager : MonoBehaviour
             switch (gateType)
             {
                 case GateType.Open:
-                    SceneLoader.Instance.LoadNextScene();
+                    FadeTransition();
+                    Invoke(nameof(LoadNextScene), 1);
                     break;
                 case GateType.Close:
                     if (GameManager.Instance.GetEnemyList().Length <= 0)
@@ -46,6 +50,7 @@ public class GateSceneManager : MonoBehaviour
                 case GateType.BossGate:
                     if (GameManager.Instance.GetEnemyList().Length <= 0)
                     {
+                        successFeedbacks.PlayFeedbacks();
                         SwitchSpriteToOpen();
                         Invoke(nameof(LoadWinCondition), 1);
                     }
@@ -60,9 +65,20 @@ public class GateSceneManager : MonoBehaviour
     public void SwitchSpriteToOpen()
     {
         spriteRenderer.sprite = openGateSprite;
+        successFeedbacks.PlayFeedbacks();
     }
 
-    public void LoadWinCondition()
+    public void FadeTransition()
+    {
+        fadeTransition.PlayFeedbacks();
+    }
+
+    public void LoadNextScene()
+    {
+        SceneLoader.Instance.LoadNextScene();
+    }
+
+    private void LoadWinCondition()
     {
         GameManager.Instance.Win();
     }

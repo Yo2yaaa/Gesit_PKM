@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using CodeMonkey.HealthSystemCM;
 using Unity.VisualScripting;
 using UnityEngine;
+using MoreMountains.Feedbacks;
 
 public class EnemyLongRangeWeapon : MonoBehaviour
 {
     [SerializeField] private WeaponTypeSO weaponTypeSO;
     [SerializeField] private Transform weapon;
     [SerializeField] private Transform shootPoint;
+    [SerializeField] private MMFeedbacks shootingSFX;
 
     private Enemy enemy;
     private Vector3 playerPosition = new(0, 0);
@@ -76,6 +78,6 @@ public class EnemyLongRangeWeapon : MonoBehaviour
         _ = bulletTransform.TryGetComponent(out Bullet bullet);
         bullet.Setup(shootDirection, weaponTypeSO.damage, weaponTypeSO.bulletMoveSpeed, Bullet.Source.Enemy);
 
-        SoundManager.Instance.PlayShootingSound();
+        shootingSFX.PlayFeedbacks();
     }
 }

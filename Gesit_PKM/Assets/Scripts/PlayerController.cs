@@ -5,6 +5,7 @@ using CodeMonkey.HealthSystemCM;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
+using MoreMountains.Feedbacks;
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float viewRadius;
     [SerializeField] private LayerMask targetMask;
     [SerializeField] private LayerMask obstacleMask;
+    [SerializeField] private MMFeedbacks getHitFeedbacks;
 
     private float horizontalInput;
     private float verticalInput;
@@ -50,6 +52,7 @@ public class PlayerController : MonoBehaviour
     private void HealthSystem_OnDamaged(object sender, EventArgs e)
     {
         getHitVFX.Play();
+        getHitFeedbacks.PlayFeedbacks();
     }
 
     void Update()

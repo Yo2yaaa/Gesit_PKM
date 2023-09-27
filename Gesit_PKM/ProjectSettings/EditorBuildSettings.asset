@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Scenes/LoadingScreen.unity
+    guid: 06b0bf4e0bb1d3f4f9decec77260af70
+  - enabled: 1
     path: Assets/Scenes/Level_Jailolo/Jailolo_Level 1.unity
     guid: b0e18f9f6f8a2aa4683af1f6563375a7
   - enabled: 1
@@ -17,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_Jailolo/Jailolo_Level 3.unity
     guid: 25e0b34e5c1698f43ad817d5dc8a05d2
+  - enabled: 1
+    path: Assets/Scenes/Level_Jailolo/Jailolo_Level 4.unity
+    guid: d542c3f9d6b9a904e9bac9d3b961d2fc
+  - enabled: 1
+    path: Assets/Scenes/Level_Jailolo/Jailolo_Level 5.unity
+    guid: ef9201f946617b54d963a5d72ec7ff9b
+  - enabled: 1
+    path: Assets/Scenes/Level_Jailolo/Jailolo_Level 6.unity
+    guid: dc61c0ed04aa3b34497b3167d29e9929
   m_configObjects: {}

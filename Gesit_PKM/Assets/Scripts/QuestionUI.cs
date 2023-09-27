@@ -41,12 +41,18 @@ public class QuestionUI : MonoBehaviour
             // Debug.Log("You are correct!");
             GateSceneManager.Instance.SwitchSpriteToOpen();
             gameObject.SetActive(false);
-            Invoke(nameof(LoadNextScene), 2f);
+            Invoke(nameof(FadeTransition), 1);
+            Invoke(nameof(GateSceneManager.Instance.LoadNextScene), 2f);
         }
     }
 
     private void LoadNextScene()
     {
         SceneLoader.Instance.LoadNextScene();
+    }
+
+    private void FadeTransition()
+    {
+        GateSceneManager.Instance.FadeTransition();
     }
 }

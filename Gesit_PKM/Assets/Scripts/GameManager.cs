@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : Singleton<GameManager>
+public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
+
     [SerializeField] private Transform winUI;
     [SerializeField] private Transform loseUI;
 
-    protected override void Awake()
+    private void Awake()
     {
-        base.Awake();
+        Instance = this;
     }
 
     // Start is called before the first frame update
@@ -32,13 +34,13 @@ public class GameManager : Singleton<GameManager>
 
     public void Win()
     {
-        Time.timeScale = 0;
         winUI.gameObject.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void Lose()
     {
-        Time.timeScale = 0;
         loseUI.gameObject.SetActive(true);
+        Time.timeScale = 0;
     }
 }

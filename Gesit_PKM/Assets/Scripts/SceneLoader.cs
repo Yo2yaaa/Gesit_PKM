@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneLoader : Singleton<SceneLoader>
+public class SceneLoader : MonoBehaviour
 {
-    protected override void Awake()
+    public static SceneLoader Instance;
+
+    private void Awake()
     {
-        base.Awake();
+        Instance = this;
     }
 
     public void LoadNextScene()
