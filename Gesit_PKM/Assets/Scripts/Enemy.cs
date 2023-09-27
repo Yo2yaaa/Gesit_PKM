@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private EnemyType enemyType;
     [SerializeField] private Transform enemyVisual;
     [SerializeField] private Transform deadVisual;
-    [SerializeField] private MMFeedbacks getHitFeedback;
+    [SerializeField] private MMFeedbacks getHitFeedbacks;
 
     private Vector3 playerPosition;
     private NavMeshAgent navMeshAgent;
@@ -53,7 +53,7 @@ public class Enemy : MonoBehaviour
 
     private void HealthSystem_OnDamaged(object sender, EventArgs e)
     {
-        getHitFeedback.PlayFeedbacks();
+        getHitFeedbacks.PlayFeedbacks();
     }
 
     private void Update()
