@@ -694,7 +694,7 @@ MonoBehaviour:
           ContributeToTotalDuration: 1
           InitialDelay: 0
           CooldownDuration: 0
-          InterruptsOnStop: 1
+          InterruptsOnStop: 0
           NumberOfRepeats: 0
           RepeatForever: 0
           DelayBetweenRepeats: 1
@@ -1904,12 +1904,9 @@ MonoBehaviour:
   getHitVFX: {fileID: 8287028251170885306}
   deadVisual: {fileID: 5426050872346794716, guid: 397c587ed4dfa4e49a37821787acf635, type: 3}
   viewRadius: 0
-  targetMask:
+  targetRaycastLayerMask:
     serializedVersion: 2
-    m_Bits: 0
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 247
   getHitFeedbacks: {fileID: 421263617237306030}
 --- !u!114 &8287028251620467984
 MonoBehaviour:

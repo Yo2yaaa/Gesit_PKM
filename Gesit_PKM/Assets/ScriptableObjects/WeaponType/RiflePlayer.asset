@@ -17,4 +17,4 @@ MonoBehaviour:
   minTimeBetweenAttack: 1.5
   maxTimeBetweenAttack: 1.5
   damage: 30
-  bulletMoveSpeed: 75
+  bulletMoveSpeed: 85

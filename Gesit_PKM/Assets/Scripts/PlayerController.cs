@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
 using MoreMountains.Feedbacks;
+using System.Linq;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,8 +20,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private ParticleSystem getHitVFX;
     [SerializeField] private Transform deadVisual;
     [SerializeField] private float viewRadius;
-    [SerializeField] private LayerMask targetMask;
-    [SerializeField] private LayerMask obstacleMask;
+    [SerializeField] private LayerMask targetRaycastLayerMask;
     [SerializeField] private MMFeedbacks getHitFeedbacks;
 
     private float horizontalInput;
@@ -70,8 +70,6 @@ public class PlayerController : MonoBehaviour
             OnMove?.Invoke(true);
         }
 
-        FindClosestTarget();
-
         Flip();
     }
 
@@ -79,6 +77,8 @@ public class PlayerController : MonoBehaviour
     {
         // rb.velocity = moveSpeed * Time.deltaTime * new Vector2(horizontalInput, verticalInput).normalized;
         rb.MovePosition(rb.position + new Vector2(horizontalInput, verticalInput) * moveSpeed * Time.fixedDeltaTime);
+
+        FindClosestTarget();
     }
 
     public void Flip()
@@ -98,7 +98,6 @@ public class PlayerController : MonoBehaviour
     private void FindClosestTarget()
     {
         Enemy[] enemies = GameManager.Instance.GetEnemyList();
-        closestTarget = null;
         float maxDistance = Mathf.Infinity;
 
         if (enemies.Length == 0)
@@ -110,15 +109,35 @@ public class PlayerController : MonoBehaviour
         foreach (Enemy enemy in enemies)
         {
             float distanceBetween = Vector3.Distance(transform.position, enemy.transform.position);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, enemy.transform.position - transform.position, maxDistance, targetRaycastLayerMask);
 
-            if (distanceBetween < maxDistance)
+            if (distanceBetween < maxDistance && hit.collider.gameObject.GetComponent<Enemy>())
             {
                 closestTarget = enemy.transform;
                 maxDistance = distanceBetween;
-            }
-        }
-        OnEnemyInSight?.Invoke(closestTarget.position);
+                OnEnemyInSight?.Invoke(closestTarget.position);
 
+                Debug.DrawRay(transform.position, enemy.transform.position - transform.position, Color.yellow);
+                return;
+            }
+            // if (distanceBetween < maxDistance)
+            // {
+            //     if (hit.collider.gameObject.GetComponent<Enemy>())
+            //     {
+            //         closestTarget = enemy.transform;
+            //         maxDistance = distanceBetween;
+
+            //         Debug.DrawRay(transform.position, enemy.transform.position - transform.position, Color.yellow);
+            //     }
+            //     else
+            //     {
+            //         OnEnemyNotInSight?.Invoke();
+
+            //         Debug.DrawRay(transform.position, enemy.transform.position - transform.position, Color.black);
+            //     }
+            // }
+        }
+        OnEnemyNotInSight?.Invoke();
     }
 
     public bool IsFlip()

@@ -19,8 +19,8 @@ public class PlayerLongRangeWeapon : MonoBehaviour
     private Vector2 target;
     private PlayerController playerController;
     private Vector2 targetDirection;
-    private bool isEnemyInSight;
-    private bool isPlayerMove;
+    private bool isEnemyInSight = false;
+    private bool isPlayerMove = false;
 
     private void Awake()
     {
@@ -49,16 +49,15 @@ public class PlayerLongRangeWeapon : MonoBehaviour
 
     private void PlayerController_OnEnemyInSight(Vector2 targetPosition)
     {
+        RotateToTarget(targetPosition);
+
         if (isPlayerMove)
         {
             if (firingCoroutine != null) StopCoroutine(firingCoroutine);
             isEnemyInSight = false;
             return;
         }
-
-        RotateToTarget(targetPosition);
-
-        if (!isEnemyInSight)
+        else if (!isEnemyInSight)
         {
             firingCoroutine = StartCoroutine(Shoot());
             isEnemyInSight = true;

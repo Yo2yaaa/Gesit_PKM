@@ -600,6 +600,10 @@ PrefabInstance:
       propertyPath: anchorOffset.y
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 5975750635749864645, guid: f8076a335a7967b49b5375a61f18cb1a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7509096287153979108, guid: f8076a335a7967b49b5375a61f18cb1a, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -725,6 +729,10 @@ PrefabInstance:
     - target: {fileID: 1350738980760293959, guid: f8076a335a7967b49b5375a61f18cb1a, type: 3}
       propertyPath: anchorOffset.y
       value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975750635749864645, guid: f8076a335a7967b49b5375a61f18cb1a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7509096287153979108, guid: f8076a335a7967b49b5375a61f18cb1a, type: 3}
       propertyPath: m_RootOrder

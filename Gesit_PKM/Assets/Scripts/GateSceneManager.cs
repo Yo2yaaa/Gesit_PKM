@@ -53,6 +53,13 @@ public class GateSceneManager : MonoBehaviour
                         successFeedbacks.PlayFeedbacks();
                         SwitchSpriteToOpen();
                         Invoke(nameof(LoadWinCondition), 1);
+                        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+
+                        // Check to unlock the next level
+                        if (nextSceneIndex > PlayerPrefs.GetInt("levelAt"))
+                        {
+                            PlayerPrefs.SetInt("levelAt", nextSceneIndex);
+                        }
                     }
                     break;
                 default:

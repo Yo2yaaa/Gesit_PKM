@@ -15,6 +15,6 @@ MonoBehaviour:
   weaponRangeType: 1
   bulletPrefab: {fileID: 1054639615768296064, guid: 1a7b160509c11a245a868d3208efdf1d, type: 3}
   minTimeBetweenAttack: 1.2
-  maxTimeBetweenAttack: 2.2
+  maxTimeBetweenAttack: 1.6
   damage: 15
   bulletMoveSpeed: 40

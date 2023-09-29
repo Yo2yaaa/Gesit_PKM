@@ -242,7 +242,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 675639709
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &7338924058704482655
@@ -1411,7 +1411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c64685046ede3442b21a0bace4be52c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponTypeSO: {fileID: 11400000, guid: 64d12de661885994482f481e40f38ede, type: 2}
+  weaponTypeSO: {fileID: 11400000, guid: cc06a2f4884ea904e8f247c9f0acb9e2, type: 2}
   weapon: {fileID: 5856841897412761203}
   shootPoint: {fileID: 5856841897676353832}
   shootingSFX: {fileID: 8955359766997007087}
@@ -1427,8 +1427,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eb9aa7183709da429076edc5294507b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthAmountMax: 250
-  startingHealthAmount: 250
+  healthAmountMax: 200
+  startingHealthAmount: 200
 --- !u!195 &5856841898404338945
 NavMeshAgent:
   m_ObjectHideFlags: 0

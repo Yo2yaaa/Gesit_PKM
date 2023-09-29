@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4716441456687890517}
   - component: {fileID: -3951373257235034911}
   - component: {fileID: 6157624446457157082}
+  - component: {fileID: 7317472331312757103}
   m_Layer: 0
   m_Name: Barrel2
   m_TagString: Untagged
@@ -118,3 +119,17 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.08, y: 1.32}
   m_Direction: 0
+--- !u!114 &7317472331312757103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4674148453428087915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ccd71d0291c3654ab7c1b1b9bb9fa5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorType: 0
+  anchorOffset: {x: 0, y: 0, z: 0}

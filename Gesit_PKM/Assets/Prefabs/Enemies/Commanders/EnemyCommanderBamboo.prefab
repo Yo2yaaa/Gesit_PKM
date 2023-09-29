@@ -1772,8 +1772,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eb9aa7183709da429076edc5294507b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthAmountMax: 250
-  startingHealthAmount: 250
+  healthAmountMax: 200
+  startingHealthAmount: 200
 --- !u!195 &5856841898404338945
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -28,5 +28,59 @@ EditorBuildSettings:
     guid: ef9201f946617b54d963a5d72ec7ff9b
   - enabled: 1
     path: Assets/Scenes/Level_Jailolo/Jailolo_Level 6.unity
+    guid: 58158333c3156cb4a817a0d676845edc
+  - enabled: 1
+    path: Assets/Scenes/Level_Jailolo/Jailolo_Level 7.unity
+    guid: 208dda0bd3e29c1419ab17546c791095
+  - enabled: 1
+    path: Assets/Scenes/Level_Jailolo/Jailolo_Level 8.unity
     guid: dc61c0ed04aa3b34497b3167d29e9929
+  - enabled: 1
+    path: Assets/Scenes/Level_Bacan/Bacan_Level 1.unity
+    guid: 4f56e4be39406c34b9fd8cf53cd0dc0a
+  - enabled: 1
+    path: Assets/Scenes/Level_Bacan/Bacan_Level 2.unity
+    guid: ad51e9a04ba283d419d39abea44125ff
+  - enabled: 1
+    path: Assets/Scenes/Level_Bacan/Bacan_Level 3.unity
+    guid: ededa9b8aea946f448f77e7617da9963
+  - enabled: 1
+    path: Assets/Scenes/Level_Bacan/Bacan_Level 4.unity
+    guid: 575ee94dc77e60b478ee75c23e7c4483
+  - enabled: 1
+    path: Assets/Scenes/Level_Bacan/Bacan_Level 5.unity
+    guid: c70470a6d5017a946a5dfa21baf037a3
+  - enabled: 1
+    path: Assets/Scenes/Level_Bacan/Bacan_Level 6.unity
+    guid: 3719cb966f042074ea90178a5a93f202
+  - enabled: 1
+    path: Assets/Scenes/Level_Bacan/Bacan_Level 7.unity
+    guid: 861ff1e301eec364c82808c9dff4b223
+  - enabled: 1
+    path: Assets/Scenes/Level_Bacan/Bacan_Level 8.unity
+    guid: f9c7c3bf2087d094ba4ea5f42b50f330
+  - enabled: 1
+    path: Assets/Scenes/Level_Tidore/Tidore_Level 1.unity
+    guid: 2a943e4413f99564da64c9436559c278
+  - enabled: 1
+    path: Assets/Scenes/Level_Tidore/Tidore_Level 2.unity
+    guid: 7c505fbe74cad754d88d3e91e9d8ee2c
+  - enabled: 1
+    path: Assets/Scenes/Level_Tidore/Tidore_Level 3.unity
+    guid: 6902610469f31bc46837453faf36b69c
+  - enabled: 1
+    path: Assets/Scenes/Level_Tidore/Tidore_Level 4.unity
+    guid: 5688c175ba861e746bee345d736361cd
+  - enabled: 1
+    path: Assets/Scenes/Level_Tidore/Tidore_Level 5.unity
+    guid: 259a60fab6ed51b4193d614b3dfe86fc
+  - enabled: 1
+    path: Assets/Scenes/Level_Tidore/Tidore_Level 6.unity
+    guid: 534e4ff197f69f245b6c1cb3024c7eae
+  - enabled: 1
+    path: Assets/Scenes/Level_Tidore/Tidore_Level 7.unity
+    guid: 56d28ceda8c78f94ea86f451d55e42ad
+  - enabled: 1
+    path: Assets/Scenes/Level_Tidore/Tidore_Level 8.unity
+    guid: a8f3a61d98ce14944b2baef84bd5b3c7
   m_configObjects: {}
