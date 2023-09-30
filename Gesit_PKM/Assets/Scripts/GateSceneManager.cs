@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using MoreMountains.Feedbacks;
+using _Joytstick.Scripts;
 
 public class GateSceneManager : MonoBehaviour
 {
@@ -44,12 +45,14 @@ public class GateSceneManager : MonoBehaviour
                 case GateType.Close:
                     if (GameManager.Instance.GetEnemyList().Length <= 0)
                     {
+                        GameInput.Instance.SetJoystickCanvas(false);
                         questionPage.gameObject.SetActive(true);
                     }
                     break;
                 case GateType.BossGate:
                     if (GameManager.Instance.GetEnemyList().Length <= 0)
                     {
+                        GameInput.Instance.SetJoystickCanvas(false);
                         successFeedbacks.PlayFeedbacks();
                         SwitchSpriteToOpen();
                         Invoke(nameof(LoadWinCondition), 1);
@@ -67,6 +70,11 @@ public class GateSceneManager : MonoBehaviour
             }
 
         }
+    }
+
+    public void SetJoystickCanvasToActive()
+    {
+        GameInput.Instance.SetJoystickCanvas(true);
     }
 
     public void SwitchSpriteToOpen()

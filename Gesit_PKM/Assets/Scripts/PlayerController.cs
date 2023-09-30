@@ -7,6 +7,8 @@ using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
 using MoreMountains.Feedbacks;
 using System.Linq;
+using UnityEngine.InputSystem;
+using _Joytstick.Scripts;
 
 public class PlayerController : MonoBehaviour
 {
@@ -23,15 +25,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask targetRaycastLayerMask;
     [SerializeField] private MMFeedbacks getHitFeedbacks;
 
-    private float horizontalInput;
-    private float verticalInput;
+    private Vector2 inputVector;
     private Rigidbody2D rb;
     private HealthSystemComponent healthSystem;
     private Transform closestTarget;
-
+    private bool isWalking;
+    private GameInput gameInput;
 
     void Awake()
     {
+        gameInput = GetComponent<GameInput>();
         rb = GetComponent<Rigidbody2D>();
         healthSystem = GetComponent<HealthSystemComponent>();
     }
@@ -57,11 +60,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //Movement
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
+        inputVector = gameInput.GetMovementVectorNormalized();
+        isWalking = inputVector != Vector2.zero;
 
-        if (horizontalInput == 0 && verticalInput == 0)
+        //Movement
+        if (inputVector == Vector2.zero)
         {
             OnMove?.Invoke(false);
         }
@@ -71,14 +74,22 @@ public class PlayerController : MonoBehaviour
         }
 
         Flip();
+        FindClosestTarget();
     }
 
     private void FixedUpdate()
     {
-        // rb.velocity = moveSpeed * Time.deltaTime * new Vector2(horizontalInput, verticalInput).normalized;
-        rb.MovePosition(rb.position + new Vector2(horizontalInput, verticalInput) * moveSpeed * Time.fixedDeltaTime);
+        HandleMovement();
+    }
 
-        FindClosestTarget();
+    private void HandleMovement()
+    {
+        // if (!isWalking) return;
+
+        rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * inputVector);
+        // transform.position += moveSpeed * Time.fixedDeltaTime * (Vector3)inputVector;
+
+
     }
 
     public void Flip()
@@ -116,8 +127,6 @@ public class PlayerController : MonoBehaviour
                 closestTarget = enemy.transform;
                 maxDistance = distanceBetween;
                 OnEnemyInSight?.Invoke(closestTarget.position);
-
-                Debug.DrawRay(transform.position, enemy.transform.position - transform.position, Color.yellow);
                 return;
             }
             // if (distanceBetween < maxDistance)

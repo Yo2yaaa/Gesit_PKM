@@ -1637,7 +1637,6 @@ GameObject:
   - component: {fileID: 5856841898404338947}
   - component: {fileID: 5856841898404338944}
   - component: {fileID: 5856841898404338945}
-  - component: {fileID: 4673080225959727629}
   m_Layer: 2
   m_Name: EnemyCommanderBamboo
   m_TagString: Untagged
@@ -1740,7 +1739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d945d5573c0b9334d9c8b90fe63309ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyType: 0
+  enemyType: 1
   enemyVisual: {fileID: 5856841897718006624}
   deadVisual: {fileID: 5426050872346794716, guid: 397c587ed4dfa4e49a37821787acf635, type: 3}
   getHitFeedbacks: {fileID: 3144085888228039183}
@@ -1796,20 +1795,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &4673080225959727629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5856841898404339007}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ccd71d0291c3654ab7c1b1b9bb9fa5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anchorType: 6
-  anchorOffset: {x: 7, y: -10, z: 0}
 --- !u!1001 &5856841896438132884
 PrefabInstance:
   m_ObjectHideFlags: 0
