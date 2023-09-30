@@ -8,6 +8,8 @@ public class LevelUnlockManager : MonoBehaviour
     [SerializeField] private int startingLevelIndex = 2;
     [SerializeField] private int levelTotalPerIsland = 8;
     [SerializeField] private Button[] levelButtons;
+    [SerializeField] private Button[] islandBookButtons;
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,7 @@ public class LevelUnlockManager : MonoBehaviour
             if (i * levelTotalPerIsland + startingLevelIndex > levelAt)
             {
                 levelButtons[i].interactable = false;
+                islandBookButtons[i].interactable = false;
             }
         }
     }

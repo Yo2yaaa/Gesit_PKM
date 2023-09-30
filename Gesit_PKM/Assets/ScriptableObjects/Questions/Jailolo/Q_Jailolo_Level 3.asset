@@ -15,6 +15,6 @@ MonoBehaviour:
   question: Upacara adat Jailolo dimana mereka membersihkan laut disebut dengan..
   answers:
   - Kololi Kie
-  - Sigofi Nyolo
   - Fore
-  correctAnswerIndex: 1
+  - Sigofi Nyolo
+  correctAnswerIndex: 2

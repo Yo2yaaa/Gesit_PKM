@@ -83,4 +83,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_Tidore/Tidore_Level 8.unity
     guid: a8f3a61d98ce14944b2baef84bd5b3c7
+  - enabled: 1
+    path: Assets/Scenes/Level_Ternate/Ternate_Level 1.unity
+    guid: daee96bbf4500d549bcdc98b688e2d1e
+  - enabled: 1
+    path: Assets/Scenes/Level_Ternate/Ternate_Level 2.unity
+    guid: 9fd68f0ae456c3c40b0a26883ce040a8
+  - enabled: 1
+    path: Assets/Scenes/Level_Ternate/Ternate_Level 3.unity
+    guid: b5d684d23b3ae3b4ca248167f0607cc8
+  - enabled: 1
+    path: Assets/Scenes/Level_Ternate/Ternate_Level 4.unity
+    guid: 2b1033ed833bffe4e91dc7299e169b3d
+  - enabled: 1
+    path: Assets/Scenes/Level_Ternate/Ternate_Level 5.unity
+    guid: f8b813800b18057448f55d51b5f61461
+  - enabled: 1
+    path: Assets/Scenes/Level_Ternate/Ternate_Level 6.unity
+    guid: 75e602fee2fb92b4cb8fb7f5c8985fbe
+  - enabled: 1
+    path: Assets/Scenes/Level_Ternate/Ternate_Level 7.unity
+    guid: a6e03f5ba7b90ec4690a43785024f562
+  - enabled: 1
+    path: Assets/Scenes/Level_Ternate/Ternate_Level 8.unity
+    guid: eaa6222893ba3dd4a89b287c6ab0f8fc
   m_configObjects: {}

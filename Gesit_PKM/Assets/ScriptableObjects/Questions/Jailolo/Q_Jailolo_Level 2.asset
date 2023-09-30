@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a482566a17f348b49b98d141bae6f8f2, type: 3}
   m_Name: Q_Jailolo_Level 2
   m_EditorClassIdentifier: 
-  question: Bahasa di jailolo sama dengan salah satu bahasa yang ada di pulau Maluku
+  question: Bahasa di Jailolo sama dengan salah satu bahasa yang ada di pulau Maluku
     Utara, pulau apakah itu...
   answers:
   - Pulau Makean
