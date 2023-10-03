@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform winUI;
     [SerializeField] private Transform loseUI;
 
+    private Enemy[] enemies;
+
     private void Awake()
     {
         Instance = this;
@@ -18,17 +20,17 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        enemies = FindObjectsOfType<Enemy>();
     }
 
     public Enemy[] GetEnemyList()
     {
-        Enemy[] enemies = FindObjectsOfType<Enemy>();
         return enemies;
     }
 

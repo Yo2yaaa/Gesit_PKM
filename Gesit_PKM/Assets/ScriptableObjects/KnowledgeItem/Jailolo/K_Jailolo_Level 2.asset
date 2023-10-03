@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9bf88876ca07554e932926435ce88e2, type: 3}
   m_Name: K_Jailolo_Level 2
   m_EditorClassIdentifier: 
-  knowledgeText: Kamu tahu tidak? Ternyata bahasa daerah di Ternate dan Jailolo itu
-    sama.
+  knowledgeText: "Bahasa Ternate adalah bahasa yang dituturkan oleh suku Ternate
+    di pulau Ternate dan beberapa wilayah Nusantara lainnya, yaitu Halmahera, Hiri,
+    Obi, Kayoa, dan Bacan. \n\nSecara historis, bahasa Ternate telah menjadi bahasa
+    utama Kesultanan Ternate, bahasa yang digunakan adalah Halmahera Utara. Kini
+    warga Jailolo menggunakan Bahasa Ternate sebagai bahasa daerahnya.\n"

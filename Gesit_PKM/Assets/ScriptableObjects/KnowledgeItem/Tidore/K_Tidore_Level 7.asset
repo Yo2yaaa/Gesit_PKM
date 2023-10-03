@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9bf88876ca07554e932926435ce88e2, type: 3}
+  m_Name: K_Tidore_Level 7
+  m_EditorClassIdentifier: 
+  knowledgeText: "Pakaian adat suku Tidore bernama Manteren Lamo. Pakaian ini biasa
+    digunakan oleh sultan. \n\nManteren lamo terdiri atas celana panjang hitam dengan
+    bis merah memanjang. Pada bagian baju berbentuk jas tertutup dengan kancing yag
+    besar terbuat dari perak berjumlah sembilan. Sementara itu, leher jas, ujung
+    tangan, dan saku jas yang terletak di bagian luar berwarna merah. \n\nUntuk perempuan
+    (bagi keluarga raja), pakaian adatnya bernama kimun gia (kebaya panjang). Kimun
+    gia terbuat dari kain satin berwarna putih dengan pengikat pinggang yang terbuat
+    dari emas."

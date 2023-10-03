@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a482566a17f348b49b98d141bae6f8f2, type: 3}
   m_Name: Q_Bacan_Level 7
   m_EditorClassIdentifier: 
-  question: Dibawah ini yang merupakan pakaian-pakaian adat asal Maluku Utara adalah...
+  question: Di bawah ini yang merupakan pakaian-pakaian adat asal Maluku Utara adalah...
   answers:
   - 'Materen Lamo, Kimun kia, Baju kapa, Baju banggsawan '
   - 'Materen Lamo, Kimun kia, Baju banggsawan, Baju Koja '

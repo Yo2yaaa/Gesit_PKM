@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     private Transform closestTarget;
     private bool isWalking;
     private GameInput gameInput;
+    private bool isAbleToMove = true;
 
     void Awake()
     {
@@ -84,7 +85,7 @@ public class PlayerController : MonoBehaviour
 
     private void HandleMovement()
     {
-        // if (!isWalking) return;
+        if (!isAbleToMove) return;
 
         rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * inputVector);
         // transform.position += moveSpeed * Time.fixedDeltaTime * (Vector3)inputVector;
@@ -109,9 +110,11 @@ public class PlayerController : MonoBehaviour
     private void FindClosestTarget()
     {
         Enemy[] enemies = GameManager.Instance.GetEnemyList();
+        if (enemies == null) return;
+
         float maxDistance = Mathf.Infinity;
 
-        if (enemies.Length == 0)
+        if (enemies.Length <= 0)
         {
             OnEnemyNotInSight?.Invoke();
             return;
@@ -119,6 +122,8 @@ public class PlayerController : MonoBehaviour
 
         foreach (Enemy enemy in enemies)
         {
+            if (!enemy) return;
+
             float distanceBetween = Vector3.Distance(transform.position, enemy.transform.position);
             RaycastHit2D hit = Physics2D.Raycast(transform.position, enemy.transform.position - transform.position, maxDistance, targetRaycastLayerMask);
 
@@ -152,5 +157,10 @@ public class PlayerController : MonoBehaviour
     public bool IsFlip()
     {
         return closestTarget.position.x < transform.position.x;
+    }
+
+    public void SetActiveMovement(bool status)
+    {
+        isAbleToMove = status;
     }
 }

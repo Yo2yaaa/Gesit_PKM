@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Q_Jailolo_Level 2
   m_EditorClassIdentifier: 
   question: Bahasa di Jailolo sama dengan salah satu bahasa yang ada di pulau Maluku
-    Utara, pulau apakah itu...
+    Utara, pulau apakah itu?
   answers:
   - Pulau Makean
   - Pulau Ternate

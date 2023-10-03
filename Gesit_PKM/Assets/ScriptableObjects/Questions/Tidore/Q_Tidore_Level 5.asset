@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a482566a17f348b49b98d141bae6f8f2, type: 3}
   m_Name: Q_Tidore_Level 5
   m_EditorClassIdentifier: 
-  question: Senjata tradisional dari Tidore adalah...
+  question: Di bawah ini senjata tradisional dari Tidore adalah...
   answers:
   - Parang dan Salawaku
   - Pistol

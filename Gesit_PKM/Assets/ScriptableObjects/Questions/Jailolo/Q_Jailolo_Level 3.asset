@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a482566a17f348b49b98d141bae6f8f2, type: 3}
   m_Name: Q_Jailolo_Level 3
   m_EditorClassIdentifier: 
-  question: Upacara adat Jailolo dimana mereka membersihkan laut disebut dengan..
+  question: Upacara adat Jailolo dimana mereka membersihkan laut disebut...
   answers:
   - Kololi Kie
   - Fore

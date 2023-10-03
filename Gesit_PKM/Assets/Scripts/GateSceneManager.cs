@@ -8,7 +8,7 @@ using _Joytstick.Scripts;
 
 public class GateSceneManager : MonoBehaviour
 {
-    private enum GateType
+    public enum GateType
     {
         Open,
         Close,
@@ -24,6 +24,7 @@ public class GateSceneManager : MonoBehaviour
     [SerializeField] private MMFeedbacks successFeedbacks;
 
     private SpriteRenderer spriteRenderer;
+    private PlayerController player;
 
     private void Awake()
     {
@@ -36,6 +37,7 @@ public class GateSceneManager : MonoBehaviour
     {
         if (other.TryGetComponent<PlayerController>(out PlayerController playerController))
         {
+            player = playerController;
             switch (gateType)
             {
                 case GateType.Open:
@@ -45,24 +47,19 @@ public class GateSceneManager : MonoBehaviour
                 case GateType.Close:
                     if (GameManager.Instance.GetEnemyList().Length <= 0)
                     {
-                        GameInput.Instance.SetJoystickCanvas(false);
                         questionPage.gameObject.SetActive(true);
+                        GameInput.Instance.SetJoystickCanvas(false);
+                        Time.timeScale = 0;
+                        // playerController.SetActiveMovement(false);
                     }
                     break;
                 case GateType.BossGate:
                     if (GameManager.Instance.GetEnemyList().Length <= 0)
                     {
-                        GameInput.Instance.SetJoystickCanvas(false);
-                        successFeedbacks.PlayFeedbacks();
-                        SwitchSpriteToOpen();
-                        Invoke(nameof(LoadWinCondition), 1);
-                        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-
-                        // Check to unlock the next level
-                        if (nextSceneIndex > PlayerPrefs.GetInt("levelAt"))
-                        {
-                            PlayerPrefs.SetInt("levelAt", nextSceneIndex);
-                        }
+                        questionPage.gameObject.SetActive(true);
+                        // GameInput.Instance.SetJoystickCanvas(false);
+                        Time.timeScale = 0;
+                        // playerController.SetActiveMovement(false);
                     }
                     break;
                 default:
@@ -75,6 +72,12 @@ public class GateSceneManager : MonoBehaviour
     public void SetJoystickCanvasToActive()
     {
         GameInput.Instance.SetJoystickCanvas(true);
+        // player.SetActiveMovement(true);
+    }
+
+    public GateType GetGateType()
+    {
+        return gateType;
     }
 
     public void SwitchSpriteToOpen()
@@ -93,8 +96,21 @@ public class GateSceneManager : MonoBehaviour
         SceneLoader.Instance.LoadNextScene();
     }
 
-    private void LoadWinCondition()
+    public void LoadWinCondition()
     {
+        GameInput.Instance.SetJoystickCanvas(false);
         GameManager.Instance.Win();
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+
+        // Check to unlock the next level
+        if (nextSceneIndex > PlayerPrefs.GetInt("levelAt"))
+        {
+            PlayerPrefs.SetInt("levelAt", nextSceneIndex);
+        }
+    }
+
+    public void UnpauseTime()
+    {
+        Time.timeScale = 1;
     }
 }

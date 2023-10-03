@@ -21,7 +21,7 @@ public class KnowledgeItemSpawner : MonoBehaviour
     {
         if (GameManager.Instance.GetEnemyList().Length == 1)
         {
-            Enemy lastEnemy = FindObjectOfType<Enemy>();
+            Enemy lastEnemy = GameManager.Instance.GetEnemyList()[0];
             spawnPosition = lastEnemy.transform.position;
         }
         else if (GameManager.Instance.GetEnemyList().Length <= 0 && !hasSpawn)

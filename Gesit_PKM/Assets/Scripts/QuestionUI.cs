@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
 using Unity.Mathematics;
+using static GateSceneManager;
 
 public class QuestionUI : MonoBehaviour
 {
@@ -38,11 +39,20 @@ public class QuestionUI : MonoBehaviour
         int answer = questionSO.GetCorrectAnswerIndex();
         if (index == answer)
         {
+            Time.timeScale = 1;
             // Debug.Log("You are correct!");
-            GateSceneManager.Instance.SwitchSpriteToOpen();
+            gateSceneManager.SwitchSpriteToOpen();
             gameObject.SetActive(false);
-            Invoke(nameof(FadeTransition), 1);
-            Invoke(nameof(GateSceneManager.Instance.LoadNextScene), 2f);
+
+            GateType gateType = gateSceneManager.GetGateType();
+            if (gateType == GateType.Close)
+            {
+                Invoke(nameof(FadeTransition), 1);
+            }
+            else if (gateType == GateType.BossGate)
+            {
+                Invoke(nameof(DoLoadWinCondition), 1);
+            }
         }
     }
 
@@ -53,6 +63,11 @@ public class QuestionUI : MonoBehaviour
 
     private void FadeTransition()
     {
-        GateSceneManager.Instance.FadeTransition();
+        gateSceneManager.FadeTransition();
+    }
+
+    private void DoLoadWinCondition()
+    {
+        gateSceneManager.LoadWinCondition();
     }
 }

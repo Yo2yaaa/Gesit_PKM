@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a482566a17f348b49b98d141bae6f8f2, type: 3}
   m_Name: Q_Bacan_Level 5
   m_EditorClassIdentifier: 
-  question: "Senjata tradisional yang bukan dari Bacan yaitu\u2026"
+  question: "Di bawah ini senjata tradisional yang bukan dari Bacan adalah\u2026"
   answers:
   - Parang
   - Keris

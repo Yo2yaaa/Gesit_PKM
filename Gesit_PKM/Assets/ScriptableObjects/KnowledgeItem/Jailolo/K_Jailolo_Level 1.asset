@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9bf88876ca07554e932926435ce88e2, type: 3}
   m_Name: K_Jailolo_Level 1
   m_EditorClassIdentifier: 
-  knowledgeText: Kamu tahu tidak? Ternyata bahasa daerah di Ternate dan Jailolo itu
-    sama.
+  knowledgeText: "Tarian tradisional dari Jailolo adalah Tarian Sara Dabi Dabi, yang
+    merupakan tarian yang berasal dari Desa Gamtala Kecamatan Jailolo. \n\nTarian
+    ini dianggap sebuah tarian yang disakralkan oleh masyarakat Desa setempat sehingga
+    waktu pelaksaannya hanya ditampilkan saat penjemputan Sultan dan para tamu penting,
+    Tari Legu Salai bagi suku Sahu di Jailolo, Kabupaten Halmahera Barat, Provinsi
+    Maluku Utara, adalah bagian yang tak terpisahkan dari adat dan Tarian Soya-soya"
