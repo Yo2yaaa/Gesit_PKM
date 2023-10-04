@@ -23,8 +23,6 @@ public class QuestionUI : MonoBehaviour
         {
             optionsArray[i].text = questionSO.GetAnswer(i);
         }
-
-        gameObject.SetActive(false);
     }
 
     // Update is called once per frame

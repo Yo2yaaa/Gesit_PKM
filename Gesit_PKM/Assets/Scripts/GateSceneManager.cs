@@ -48,18 +48,14 @@ public class GateSceneManager : MonoBehaviour
                     if (GameManager.Instance.GetEnemyList().Length <= 0)
                     {
                         questionPage.gameObject.SetActive(true);
-                        GameInput.Instance.SetJoystickCanvas(false);
                         Time.timeScale = 0;
-                        // playerController.SetActiveMovement(false);
                     }
                     break;
                 case GateType.BossGate:
                     if (GameManager.Instance.GetEnemyList().Length <= 0)
                     {
                         questionPage.gameObject.SetActive(true);
-                        // GameInput.Instance.SetJoystickCanvas(false);
                         Time.timeScale = 0;
-                        // playerController.SetActiveMovement(false);
                     }
                     break;
                 default:
@@ -67,12 +63,6 @@ public class GateSceneManager : MonoBehaviour
             }
 
         }
-    }
-
-    public void SetJoystickCanvasToActive()
-    {
-        GameInput.Instance.SetJoystickCanvas(true);
-        // player.SetActiveMovement(true);
     }
 
     public GateType GetGateType()
@@ -98,7 +88,6 @@ public class GateSceneManager : MonoBehaviour
 
     public void LoadWinCondition()
     {
-        GameInput.Instance.SetJoystickCanvas(false);
         GameManager.Instance.Win();
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 

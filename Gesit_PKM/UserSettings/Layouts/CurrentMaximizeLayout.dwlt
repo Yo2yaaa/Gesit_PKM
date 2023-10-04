@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 53849
+  controlID: -1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -62,20 +62,20 @@ MonoBehaviour:
   m_SerializedViewNames:
   - UnityEditor.GameView
   m_SerializedViewValues:
-  - D:\Projects\Unity Projects\Geshit_Game\Gesit_PKM\Gesit_PKM\Library\PlayModeViewStates\0818f025431c7d949b3628862bb91c14
+  - D:\Projects\Unity Projects\GesitGameShit\Gesit_PKM\Library\PlayModeViewStates\7167a20af1418a14cb47066a3760a838
   m_PlayModeViewName: Device Simulator
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 1}
-  m_TargetSize: {x: 1170, y: 2532}
+  m_TargetSize: {x: 1284, y: 2778}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 1
+  m_EnterPlayModeBehavior: 2
   m_UseMipMap: 0
   m_SimulatorState:
     controlPanelVisible: 0
-    controlPanelWidth: NaN
+    controlPanelWidth: 0
     controlPanelFoldoutKeys:
     - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
     controlPanelFoldoutValues: 00
@@ -85,11 +85,11 @@ MonoBehaviour:
     pluginStates:
     - '{}'
     - '{}'
-    scale: 10
+    scale: 13
     fitToScreenEnabled: 1
     rotationDegree: 0
     highlightSafeAreaEnabled: 0
-    friendlyName: Apple iPhone 12
+    friendlyName: Apple iPhone 12 Pro Max
     screenIndex: 0
     networkReachability: 1
     systemLanguage: 10
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 53850
+  controlID: -1
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 53851
+  controlID: -1
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -162,8 +162,8 @@ MonoBehaviour:
     y: 0
     width: 290.4
     height: 432
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -206,9 +206,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 7cc8f8ff4ac9f8ff04caf8ff24caf8ff28caf8ff96d5f8fff8e0f8ff08e1f8ff20e1f8ff5ee3f8ffe4eef8ff14f7f8ff86fff8ffc807f9ff9a0ff9ffbc16f9ff061df9ff0821f9ffc822f9ffc227f9ff002ef9ff2c35f9ff483cf9ff8c43f9ff064bf9ff5c52f9ffde58f9ff645ef9ff4865f9ff246cf9ffde73f9ff667bf9ff4a82f9ffe288f9ffdc8ef9ff5894f9ff0ebef9ff40c1f9ffb6c8f9ff20d0f9ffb0d7f9ffeedef9ff60e6f9ff6cedf9ff9af3f9ffccf8f9ffd402faff520afaffcc11faff6019faffce20faffde27faff562efaff8a33faff1a46faff465efaff8a69faff6276faffea7ffaff4687faffc48dfaffba93faffc098faff58a2faffe6a9faff8ab1faff6eb9faffaac2faff0ecbfaffc6d0faffccdffaff02e7faff8cf0faff3af8faffaafffaff7e06fbffae0cfbff5a12fbffd218fbffb220fbff5428fbff982ffbffd43afbffd240fbff4048fbff824ffbff3257fbff765efbff8464fbffe669fbff5e82fbff1e8bfbff948bfbffae8efbffa492fbffeea2fbffc8adfbffb6b4fbffecbafbff26c0fbff4626fcffb028fcffa829fcff6a2cfcff80740100867401009e740100fa7501009e760100b0ce01004ad201001ed6010074d9010002e90100ec160200b41a0200aa2a0200ee3c020018400200aa570200ae570200aa580200ac5a0200c65c0200265f0200b6610200e6630200ee670200e6690200e86b0200026e02007471020004740200347602005a78020072780200109b0200d69e0200baa20200b8a60200b6aa0200a6ae020094b202007cb602004eba0200c6bd02007ac102007cc50200b0c90200b0cd020084d102005cd50200a6d8020048db020004de0200fae0020020e4020032e702005cea02007ced020062020300140d0300a60d03005e0e030008100300061103006a1103009a110300a61103002e1303006e130300
+      m_SelectedIDs: 26deffff
+      m_LastClickedID: -8666
+      m_ExpandedIDs: 38deffff4edeffff84e2ffffc0efffff30f7ffffd8f8ffffccfaffff5e830000108900005a9c0000aab30000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -224,7 +224,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 5}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -323,7 +323,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 24.8}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-scene-view-toolbar
@@ -643,19 +643,6 @@ MonoBehaviour:
       layout: 4
       size: {x: 0, y: 0}
       sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 1
-      snapOffset: {x: 48, y: 48}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: UnityEditor.SceneViewCameraOverlay
-      index: 14
-      layout: 4
-      size: {x: 0, y: 0}
-      sizeOverriden: 0
     m_OverlaysVisible: 1
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
   m_Gizmos: 1
@@ -667,9 +654,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 13.964389, y: 0.5985873, z: 18.950514}
+    m_Target: {x: 4.5449486, y: 1.2580343, z: -0.13317536}
     speed: 2
-    m_Value: {x: 13.964389, y: 0.5985873, z: 18.950514}
+    m_Value: {x: 4.5449486, y: 1.2580343, z: -0.13317536}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -719,9 +706,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 17.053928
+    m_Target: 19.08016
     speed: 2
-    m_Value: 17.053928
+    m_Value: 19.08016
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -818,7 +805,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/ScriptableObjects/KnowledgeItem/Ternate
+    - Assets/Scenes/Level_Ternate
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -826,16 +813,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/ScriptableObjects/KnowledgeItem/Ternate
+  - Assets/Scenes/Level_Ternate
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Projects\Unity Projects\Geshit_Game\Gesit_PKM\Gesit_PKM
+  m_LastProjectPath: D:\Projects\Unity Projects\GesitGameShit\Gesit_PKM
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 238.20001}
-    m_SelectedIDs: 9c560200
-    m_LastClickedID: 153244
-    m_ExpandedIDs: 00000000b84000001441000028420000b443000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 142.20001}
+    m_SelectedIDs: 0a830000
+    m_LastClickedID: 33546
+    m_ExpandedIDs: 00000000c6800000b882000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -863,7 +850,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b840000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000c680000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -888,9 +875,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: d0120300
-    m_LastClickedInstanceID: 201424
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 26deffff
+    m_LastClickedInstanceID: -8666
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -972,8 +959,8 @@ MonoBehaviour:
     y: 0
     width: 363.19995
     height: 730.8
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -1019,7 +1006,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 201424
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0

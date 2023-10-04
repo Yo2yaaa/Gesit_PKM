@@ -396,7 +396,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &6791387509361290773
 MonoBehaviour:
@@ -1933,7 +1933,6 @@ GameObject:
   - component: {fileID: 8287028251620467985}
   - component: {fileID: 8287028251620467984}
   - component: {fileID: 8287028251620467987}
-  - component: {fileID: 803627017381387}
   - component: {fileID: -4781427780889478407}
   m_Layer: 8
   m_Name: PlayerPistol
@@ -2125,20 +2124,6 @@ MonoBehaviour:
   shootingSFX: {fileID: 7163275873392751695}
   weaponAppearFeedback: {fileID: 206387180402739178}
   weaponDisappearFeedback: {fileID: 4012679991428608854}
---- !u!114 &803627017381387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8287028251620467981}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ccd71d0291c3654ab7c1b1b9bb9fa5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anchorType: 4
-  anchorOffset: {x: 0, y: -16, z: 0}
 --- !u!114 &-4781427780889478407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2152,8 +2137,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joystick: {fileID: 7861176017015579036}
-  inputJoystickCanvas: {fileID: 1319678889413213503}
-  joystickGameObject: {fileID: 7861176016004998150}
+  inputJoystickCanvas: {fileID: 0}
+  joystickGameObject: {fileID: 0}
 --- !u!1 &8287028252248357883
 GameObject:
   m_ObjectHideFlags: 0
@@ -2457,7 +2442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8170153791668043268, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1705.3
+      value: 2077
       objectReference: {fileID: 0}
     - target: {fileID: 8170153791668043268, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2493,7 +2478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8170153791668043268, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1705.3
+      value: -2077
       objectReference: {fileID: 0}
     - target: {fileID: 8170153791668043268, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2604,11 +2589,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
---- !u!1 &7861176016004998150 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8170153792821263259, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
-  m_PrefabInstance: {fileID: 2052153215250046877}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7861176017015579033 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8170153791668043268, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}

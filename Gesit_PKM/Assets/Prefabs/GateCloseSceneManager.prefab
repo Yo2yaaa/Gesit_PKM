@@ -1307,9 +1307,9 @@ RectTransform:
   - {fileID: 8161330052153648809}
   m_Father: {fileID: 8113433124046811971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -732.0517}
   m_SizeDelta: {x: 1355.231, y: 248.8207}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4184942023285920819
@@ -1440,9 +1440,9 @@ RectTransform:
   - {fileID: 5224517962327917459}
   m_Father: {fileID: 8113433124046811971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -428.23102}
   m_SizeDelta: {x: 1355.231, y: 248.8207}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5535070564188959170
@@ -1671,9 +1671,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8670993235699257353}
-        m_TargetAssemblyTypeName: GateSceneManager, Assembly-CSharp
-        m_MethodName: SetJoystickCanvasToActive
+      - m_Target: {fileID: 929066946932804255}
+        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
+        m_MethodName: UnPause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1686,18 +1686,6 @@ MonoBehaviour:
       - m_Target: {fileID: 3559308986137469758}
         m_TargetAssemblyTypeName: MoreMountains.Feedbacks.MMF_Player, MoreMountains.Feedbacks
         m_MethodName: PlayFeedbacks
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8670993235699257353}
-        m_TargetAssemblyTypeName: GateSceneManager, Assembly-CSharp
-        m_MethodName: UnpauseTime
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2045,7 +2033,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7240524440254566914
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2258,9 +2246,9 @@ RectTransform:
   - {fileID: 2512462968462343895}
   m_Father: {fileID: 8113433124046811971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -124.41035}
   m_SizeDelta: {x: 1355.231, y: 248.8207}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5575281306047863059
@@ -2453,7 +2441,6 @@ GameObject:
   - component: {fileID: 8670993235699257358}
   - component: {fileID: 8670993235699257359}
   - component: {fileID: 8670993235699257353}
-  - component: {fileID: 8670993235699257356}
   - component: {fileID: 7921629395646829184}
   m_Layer: 0
   m_Name: GateCloseSceneManager
@@ -2563,10 +2550,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.31992853}
+  m_Offset: {x: 0, y: 0.08862436}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2577,7 +2564,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 17.486109, y: 0.6301429}
+  m_Size: {x: 17.486109, y: 1.0927513}
   m_EdgeRadius: 0
 --- !u!114 &8670993235699257353
 MonoBehaviour:
@@ -2596,22 +2583,6 @@ MonoBehaviour:
   openGateSprite: {fileID: 21300000, guid: 0e1037265fdcce144811eb703dff9e8c, type: 3}
   fadeTransition: {fileID: 459070868938135518}
   successFeedbacks: {fileID: 7406635579729755561}
---- !u!114 &8670993235699257356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8670993235699257354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 1
-  m_Area: 1
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!114 &7921629395646829184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2638,6 +2609,7 @@ GameObject:
   - component: {fileID: 1153131309936508813}
   - component: {fileID: 847420484394270522}
   - component: {fileID: 5104379014684386283}
+  - component: {fileID: 929066946932804255}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -2729,6 +2701,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &929066946932804255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8957954612748896806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b446ede6a5a35243a34d4ed9f83b118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9079671500812871873
 GameObject:
   m_ObjectHideFlags: 0
