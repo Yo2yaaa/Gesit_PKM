@@ -22,6 +22,8 @@ public class GateSceneManager : MonoBehaviour
     [SerializeField] private Sprite openGateSprite;
     [SerializeField] private MMFeedbacks fadeTransition;
     [SerializeField] private MMFeedbacks successFeedbacks;
+    [SerializeField] private MMFeedbacks wrongAnswerFeedbacks;
+    [SerializeField] private InterstitialAd ads;
 
     private SpriteRenderer spriteRenderer;
     private PlayerController player;
@@ -65,6 +67,11 @@ public class GateSceneManager : MonoBehaviour
         }
     }
 
+    public void WrongAnswer()
+    {
+        wrongAnswerFeedbacks.PlayFeedbacks();
+    }
+
     public GateType GetGateType()
     {
         return gateType;
@@ -88,6 +95,7 @@ public class GateSceneManager : MonoBehaviour
 
     public void LoadWinCondition()
     {
+        ads.ShowAd();
         GameManager.Instance.Win();
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 

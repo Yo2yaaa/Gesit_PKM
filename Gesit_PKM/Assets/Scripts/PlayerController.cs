@@ -48,9 +48,10 @@ public class PlayerController : MonoBehaviour
 
     private void HealthSystem_OnDead(object sender, EventArgs e)
     {
-        Instantiate(deadVisual, transform.position, Quaternion.identity);
+        // Instantiate(deadVisual, transform.position, Quaternion.identity);
+        healthSystem.GetHealthSystem().Heal(healthSystem.GetHealthSystem().GetHealthMax());
         GameManager.Instance.Lose();
-        Destroy(gameObject);
+        // Destroy(gameObject);
     }
 
     private void HealthSystem_OnDamaged(object sender, EventArgs e)

@@ -52,6 +52,10 @@ public class QuestionUI : MonoBehaviour
                 Invoke(nameof(DoLoadWinCondition), 1);
             }
         }
+        else
+        {
+            gateSceneManager.WrongAnswer();
+        }
     }
 
     private void LoadNextScene()

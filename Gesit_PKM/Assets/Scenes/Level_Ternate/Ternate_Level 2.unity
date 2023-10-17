@@ -1074,6 +1074,10 @@ PrefabInstance:
       propertyPath: managedReferences[8504235951456518174].DestinationSceneName
       value: Ternate_Level 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6562845925463415336, guid: 9676191ac9252814cbb3001185056f40, type: 3}
+      propertyPath: managedReferences[8504235951456518174].DestinationSceneName
+      value: Ternate_Level 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7885938495937375664, guid: 9676191ac9252814cbb3001185056f40, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -9.430176
